@@ -1,1 +1,3 @@
-export * from './lib/compiler.js';
+export { CompilerContext } from './context.js';
+export { compileFile, compileProject } from './pipeline.js';
+export * from './types.js';
