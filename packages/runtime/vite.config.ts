@@ -2,14 +2,14 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/compiler',
+  cacheDir: '../../node_modules/.vite/packages/runtime',
   plugins: [],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
   // },
   test: {
-    name: '@bridge/compiler',
+    name: '@bridge/runtime',
     watch: false,
     globals: true,
     environment: 'node',

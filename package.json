@@ -15,6 +15,7 @@
     "@nx/vite": "22.0.1",
     "@nx/web": "22.0.1",
     "@swc-node/register": "~1.9.1",
+    "@swc/cli": "~0.6.0",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@types/node": "20.19.9",

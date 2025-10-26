@@ -1,5 +1,5 @@
 {
-  "name": "@bridge/compiler",
+  "name": "@bridge/runtime",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -15,7 +15,7 @@
     }
   },
   "nx": {
-    "sourceRoot": "packages/compiler/src",
+    "sourceRoot": "packages/runtime/src",
     "targets": {
       "build": {
         "executor": "@nx/js:swc",
@@ -23,9 +23,9 @@
           "{options.outputPath}"
         ],
         "options": {
-          "outputPath": "packages/compiler/dist",
-          "main": "packages/compiler/src/index.ts",
-          "tsConfig": "packages/compiler/tsconfig.lib.json",
+          "outputPath": "packages/runtime/dist",
+          "main": "packages/runtime/src/index.ts",
+          "tsConfig": "packages/runtime/tsconfig.lib.json",
           "skipTypeCheck": true,
           "stripLeadingPaths": true
         }
