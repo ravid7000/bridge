@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "npmScope": "bridge",
+  "workspaceLayout": {
+    "appsDir": "packages",
+    "libsDir": "packages"
+  },
+  "defaultProject": "app",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["default", "^default"]
+    }
+  },
+  "generators": {
+    "@nx/workspace:library": {
+      "language": "ts"
+    },
+    "@nx/js:library": {
+      "compiler": "tsc",
+      "bundler": "tsc",
+      "strict": true,
+      "unitTestRunner": "none"
+    }
+  }
+}
