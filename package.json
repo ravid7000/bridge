@@ -1,0 +1,13 @@
+{
+  "name": "bridge",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @bridge/app",
+    "build": "npm run build --workspace @bridge/app",
+    "preview": "npm run preview --workspace @bridge/app"
+  }
+}
