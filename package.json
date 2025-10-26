@@ -1,23 +1,21 @@
 {
-  "name": "bridge",
-  "private": true,
+  "name": "@org/source",
   "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "22.0.1",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "nx": "22.0.1",
+    "prettier": "^2.6.2",
+    "tslib": "^2.3.0",
+    "typescript": "~5.9.2"
+  },
   "workspaces": [
     "packages/*"
-  ],
-  "scripts": {
-    "dev": "nx serve app",
-    "build": "nx build app",
-    "preview": "nx run app:preview",
-    "nx": "nx"
-  },
-  "devDependencies": {
-    "@nx/js": "^20.0.0",
-    "@nx/vite": "^20.0.0",
-    "@nx/workspace": "^20.0.0",
-    "@types/node": "^20.11.17",
-    "nx": "^20.0.0",
-    "typescript": "~5.9.3",
-    "vite": "^7.1.7"
-  }
+  ]
 }

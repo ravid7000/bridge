@@ -1,26 +1,25 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "bridge",
-  "workspaceLayout": {
-    "appsDir": "packages",
-    "libsDir": "packages"
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": ["default"],
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "defaultProject": "app",
-  "targetDefaults": {
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["default", "^default"]
+  "nxCloudId": "68fdea022c06f46c804f58c6",
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
     }
-  },
-  "generators": {
-    "@nx/workspace:library": {
-      "language": "ts"
-    },
-    "@nx/js:library": {
-      "compiler": "tsc",
-      "bundler": "tsc",
-      "strict": true,
-      "unitTestRunner": "none"
-    }
-  }
+  ]
 }
